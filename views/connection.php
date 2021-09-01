@@ -59,6 +59,7 @@ define('DIR', 'http://localhost:8888/PDO/Exo3/');
                         Member Login
                     </span>
 
+                    <div class="errorMessage text-center"><?= $errorMsg['login'] ?></div>
                     <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
                         <input class="input100" type="text" name="login" placeholder="Login">
                         <span class="focus-input100"></span>

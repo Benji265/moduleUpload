@@ -7,7 +7,6 @@ require_once '../models/Users.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['validConnection'])) {
-        var_dump($_POST);
         if (!empty($_POST['login']) && !empty($_POST['password'])) {
 
             $userObj = new Users();
