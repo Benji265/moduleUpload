@@ -1,0 +1,14 @@
+.errorMessage {
+    color: red;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.sizeImg {
+    width: 100%;
+    height: auto;
+}
+
+.mainContent {
+    margin-bottom: 8rem !important;
+}
