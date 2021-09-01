@@ -25,4 +25,17 @@ class Users extends Database
 
         return $exec;
     }
+
+    public function updateUser($passwordHash, $id)
+    {
+        $bdd = $this->connectDatabase();
+
+        $requete = 'UPDATE `Users` SET `User_Password` = :passwordHash  WHERE `User_ID` = :id';
+
+        $exec = $bdd->prepare($requete);
+
+        $exec->bindValue(':passwordHash', $passwordHash, PDO::PARAM_STR);
+        $exec->bindValue(':id', $id, PDO::PARAM_INT);
+        $exec->execute();
+    }
 }
