@@ -46,6 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             foreach ($arrayAllUsers as $value) {
                 if ($value['User_Pseudo'] != $pseudo) {
+                    $errorMsg = [];
                     $verifOk = true;
                 } else {
                     $errorMsg['pseudo'] = 'Pseudo déjà pris';
@@ -56,6 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             foreach ($arrayAllUsers as $value) {
                 if ($value['User_Email'] != $email) {
+                    $errorMsg = [];
                     $verifOk = true;
                 } else {
                     $errorMsg['email'] = 'Email déjà pris';

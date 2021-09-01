@@ -85,7 +85,7 @@ define('DIR', 'http://localhost:8888/PDO/Exo3/');
                         <span class="txt1">
                             Forgot
                         </span>
-                        <a class="txt2" href="#">
+                        <a class="txt2" href="recoveryPassword.php">
                             Password?
                         </a>
                     </div>
