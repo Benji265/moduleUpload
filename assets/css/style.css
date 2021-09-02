@@ -1,3 +1,23 @@
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('http://localhost:8888/PDO/Exo3/fonts/poppins/Poppins-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('http://localhost:8888/PDO/Exo3/fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url('http://localhost:8888/PDO/Exo3/fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url('http://localhost:8888/PDO/Exo3/fonts/montserrat/Montserrat-Bold.ttf');
+}
+
 .errorMessage {
     color: red;
     font-style: italic;
@@ -109,7 +129,7 @@
     background: linear-gradient(-135deg, #c850c0, #4158d0);
 }
 
-.wrap-addPicture{
+.wrap-addPicture {
     width: 480px;
     background: #fff;
     border-radius: 10px;
@@ -142,7 +162,7 @@
     background: linear-gradient(-135deg, #c850c0, #4158d0);
 }
 
-.wrap-editPicture{
+.wrap-editPicture {
     width: 480px;
     background: #fff;
     border-radius: 10px;
@@ -159,4 +179,18 @@
 
     width: 100%;
     padding-bottom: 14px;
+}
+
+/* Fin EditPicture Page */
+
+/* Index Page */
+
+.container-index {
+    min-height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
 }

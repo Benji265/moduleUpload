@@ -15,7 +15,7 @@
                         <div class="card mx-auto" style="width: 18rem;">
                             <img class="sizeImg" src="data:image/<?= $value['type'] ?>;base64, <?= $value['Base_64'] ?>">
                             <div class="card-body d-flex justify-content-center">
-                                <button class="btn btn-danger" type="submit" name="deleteImg" value="<?= $value['Picture_ID'] ?>">Supprimer</button>
+                                <button class="btn btn-danger" type="submit" name="deleteImg" value="<?= $value['Picture_ID'] ?>"><i class="bi bi-trash"></i> Supprimer</button>
                             </div>
                         </div>
                     </form>
@@ -38,6 +38,16 @@
         </div>
     </div>
 <?php } ?>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    if (<?= $validDelete ?>) {
+        Swal.fire({
+            title: '<b>Image Supprimer</b>',
+            icon: 'success',
+            confirmButtonText: '<a href="editPicture.php">OK</a>'
+        })
+    }
+</script>
 </body>
 
 </html>

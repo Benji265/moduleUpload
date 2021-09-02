@@ -10,12 +10,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (!empty($_POST['login']) && !empty($_POST['password'])) {
 
             $userObj = new Users();
-            $arrayAllPatient = $userObj->getAllUsers();
+            $arrayAllUsers = $userObj->getAllUsers();
 
-            $login = htmlspecialchars($_POST['login']);
+            $login = trim(htmlspecialchars($_POST['login']));
             $password = htmlspecialchars($_POST['password']);
 
-            foreach ($arrayAllPatient as $value) {
+            foreach ($arrayAllUsers as $value) {
                 if ($value['User_Pseudo'] == $login || $value['User_Email'] == $login) {
                     $verifOk = true;
                     $passwordHash = $value['User_Password'];
