@@ -2,6 +2,7 @@
 <?php require_once '../controllers/controllerRecoveryPassword.php'; ?>
 <?php require_once 'Navbar.php'; ?>
 
+
 <?php if (!$_GET['token']) { ?>
     <div class="container-fluid container-recovery">
         <div class="wrap-recovery">
@@ -24,7 +25,7 @@
             </form>
         </div>
     </div>
-<?php } else { ?>
+<?php } elseif ($urlValid) { ?>
     <div class="container-fluid container-recovery">
         <div class="wrap-recovery">
             <div class="row mt-3 mb-3">
@@ -50,7 +51,22 @@
             </form>
         </div>
     </div>
+<?php } else { ?>
+    <div class="container-fluid container-recovery">
+        <div class="wrap-recovery">
+            <div class="row mt-3 mb-3">
+                <span class="recovery-title">Erreur</span>
+            </div>
+            <div class="row text-center">
+                <p class="errorMessage">Vous avez déjà changer de mot de passe</p>
+            </div>
+            <div class="row text-center">
+                <p><a href="../index.php">Accueil</a></p>
+            </div>
+        </div>
+    </div>
 <?php } ?>
+
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     if (<?= $verifOk ?>) {

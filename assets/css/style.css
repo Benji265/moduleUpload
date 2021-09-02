@@ -127,3 +127,36 @@
     width: 100%;
     padding-bottom: 14px;
 }
+
+/* Fin AddPicture Page */
+
+/* EditPicture Page */
+
+.container-editPicture {
+    min-height: 87vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+
+.wrap-editPicture{
+    width: 480px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.editPicture-title {
+    font-family: Poppins-Bold;
+    font-size: 24px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+
+    width: 100%;
+    padding-bottom: 14px;
+}

@@ -10,6 +10,17 @@ $getToken = $_GET['token'];
 $getId = $_GET['id'];
 $verifOk = 0;
 $tokenOk = 0;
+$urlValid = false;
+
+$tokenObj = new Token();
+$arrayAllToken = $tokenObj->getAllToken();
+
+foreach ($arrayAllToken as $value) {
+    if ($getToken == $value['Token_Password']) {
+        $urlValid = true;
+        break;
+    }
+}
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['validRecovery'])) {
