@@ -17,7 +17,7 @@ define('DIR', 'http://localhost:8888/PDO/Exo3/');
 
 <body>
     <nav class="navbar fixed-bottom navbar-light bg-light">
-        <div class="container-fluid justify-content-around">
+        <div class="container-fluid justify-content-around flex-nowrap">
             <a href="<?= DIR ?>"><button class="btn" type="button"><i class="bi bi-house-door-fill fs-2"></i>
                     <div>Home</div>
                 </button></a>

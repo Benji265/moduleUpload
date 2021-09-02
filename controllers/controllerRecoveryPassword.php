@@ -29,7 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 break;
             } else {
                 $errorMsg['email'] = 'Email introuvable';
-                $verifOk = false;
             }
         }
 
@@ -55,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $message = (new Swift_Message('Récuperation de mot de passe'))
                 ->setFrom(['admin@gmail.com' => 'Admin'])
                 ->setTo(['receiver@domain.org'])
-                ->setBody('Cliquez sur le lien pour changer de mot de passe : http://localhost:8888/PDO/Exo3/views/recoveryPassword.php?token=' . $token . '&id=' . $userID);
+                ->setBody('Cliquez sur le lien pour changer de mot de passe : <a href="http://localhost:8888/PDO/Exo3/views/recoveryPassword.php?token=' . $token . '&id=' . $userID . '">Nouveaux mot de passe</a>', 'text/html');
 
             // Send the message
             $result = $mailer->send($message);

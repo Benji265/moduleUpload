@@ -6,7 +6,7 @@
     <div class="row text-center mt-3 mb-3">
         <h1><b>Galerie</b></h1>
     </div>
-    <div class="row g-4">
+    <div class="row g-5">
         <?php foreach ($arrayPicture as $value) { ?>
             <div class="col-lg-4 col-12">
                 <div class="card mx-auto" style="width: 18rem;">

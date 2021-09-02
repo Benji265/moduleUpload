@@ -8,9 +8,10 @@ require_once '../models/Form.php';
 
 $regexPseudo = "/^[A-Za-z\é\è\ê\-]+$/";
 
+$valideUser = 0;
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['validRegistration'])) {
-
         $formObj = new Form();
 
         $errorMsg = array();
@@ -31,7 +32,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $errorMsg['confirmPassword'] = $formObj->checkEmail($_POST, 'email');
         }
 
-        if (empty($errorMsg)) {
+        if (!empty($_POST['g-recaptcha-response'])) {
+            $test = $formObj->checkCaptcha('6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe', $_POST['g-recaptcha-response']);
+        } else {
+            $errorMsg['captcha'] = 'Veuillez valider le captcha';
+        }
+
+        if (empty($errorMsg) && $test['success']) {
 
             $userObj = new Users();
 

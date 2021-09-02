@@ -32,4 +32,12 @@ class Form
             return false;
         }
     }
+
+    public function checkCaptcha(string $secret, string $response)
+    {
+        $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $response;
+        $response = file_get_contents($url);
+        $responseKeys = json_decode($response, true);
+        return $responseKeys;
+    }
 }

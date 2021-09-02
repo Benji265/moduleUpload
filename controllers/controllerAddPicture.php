@@ -10,7 +10,7 @@ $extensions = [
     "image/gif"
 ];
 
-$uploadOk = false;
+$uploadOk = 0;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['validAddPicture'])) {

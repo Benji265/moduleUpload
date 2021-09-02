@@ -13,6 +13,8 @@
     margin-bottom: 8rem !important;
 }
 
+/* Recovery Page */
+
 .container-recovery {
     min-height: 87vh;
     display: flex;
@@ -50,6 +52,72 @@
 }
 
 .recovery-title {
+    font-family: Poppins-Bold;
+    font-size: 24px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+
+    width: 100%;
+    padding-bottom: 14px;
+}
+
+/* Fin Recovery Page */
+
+/* Registration Page */
+
+.container-registration {
+    min-height: 87vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+
+.wrap-registration {
+    width: 480px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 7px 2px 5px 1px
+}
+
+.registration-title {
+    font-family: Poppins-Bold;
+    font-size: 24px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+
+    width: 100%;
+    padding-bottom: 14px;
+}
+
+/* Fin Registration Page */
+
+/* AddPicture Page */
+
+.container-addPicture {
+    min-height: 87vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+
+.wrap-addPicture{
+    width: 480px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.addPicture-title {
     font-family: Poppins-Bold;
     font-size: 24px;
     color: #333333;
