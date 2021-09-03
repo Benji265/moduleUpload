@@ -2,7 +2,7 @@
 
 class Token extends Database
 {
-    public function insertToken($token, $userID)
+    public function insertToken(string $token, string $userID): void
     {
         $bdd = $this->connectDatabase();
 
@@ -15,7 +15,7 @@ class Token extends Database
         $exec->execute();
     }
 
-    public function getAllToken()
+    public function getAllToken(): array
     {
         $bdd = $this->connectDatabase();
 
@@ -26,7 +26,7 @@ class Token extends Database
         return $exec;
     }
 
-    public function deleteToken($id)
+    public function deleteToken(int $id): void
     {
         $bdd = $this->connectDatabase();
 

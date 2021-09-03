@@ -2,7 +2,7 @@
 
 class Picture extends Database
 {
-    public function addPicture($base64, $type, $userID)
+    public function addPicture(string $base64, string $type, string $userID): void
     {
         $bdd = $this->connectDatabase();
 
@@ -17,7 +17,7 @@ class Picture extends Database
         $exec->execute();
     }
 
-    public function getAllPicture()
+    public function getAllPicture(): array
     {
         $bdd = $this->connectDatabase();
 
@@ -29,7 +29,7 @@ class Picture extends Database
         return $exec;
     }
 
-    public function getPictureForOneUser($id)
+    public function getPictureForOneUser(int $id): array
     {
         $bdd = $this->connectDatabase();
 
@@ -44,7 +44,7 @@ class Picture extends Database
         return $result;
     }
 
-    public function deleteOnePicture($id)
+    public function deleteOnePicture(int $id): void
     {
         $bdd = $this->connectDatabase();
 

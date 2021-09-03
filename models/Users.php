@@ -2,7 +2,7 @@
 
 class Users extends Database
 {
-    public function createUser(string $pseudo, string $email, string $password)
+    public function createUser(string $pseudo, string $email, string $password): void
     {
         $bdd = $this->connectDatabase();
 
@@ -17,7 +17,7 @@ class Users extends Database
         $exec->execute();
     }
 
-    public function getAllUsers()
+    public function getAllUsers(): array
     {
         $bdd = $this->connectDatabase();
 
@@ -26,7 +26,7 @@ class Users extends Database
         return $exec;
     }
 
-    public function updateUser($passwordHash, $id)
+    public function updateUser(string $passwordHash, int $id): void
     {
         $bdd = $this->connectDatabase();
 
