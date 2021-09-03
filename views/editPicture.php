@@ -44,7 +44,9 @@
         Swal.fire({
             title: '<b>Image Supprimer</b>',
             icon: 'success',
-            confirmButtonText: '<a href="editPicture.php">OK</a>'
+            confirmButtonText: 'OK'
+        }).then(function(){
+            window.location = 'editPicture.php';
         })
     }
 </script>

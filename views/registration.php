@@ -49,7 +49,9 @@
             title: '<b>Bienvenu</b>',
             icon: 'success',
             html: '<a href="connection.php">Connexion</a>',
-            confirmButtonText: '<a href="../index.php">OK</a>'
+            confirmButtonText: 'OK'
+        }).then(function(){
+            window.location = '../index.php';
         })
     }
 </script>

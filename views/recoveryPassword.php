@@ -81,6 +81,8 @@
             title: '<b>Mot de passe changer</b>',
             icon: 'success',
             confirmButtonText: 'OK'
+        }).then(function(){
+            window.location = 'connection.php';
         })
     }
 </script>
