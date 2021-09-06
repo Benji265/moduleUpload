@@ -10,22 +10,22 @@
             <div class="row g-3 d-flex flex-column align-items-center justify-content-center">
                 <div class="col-auto">
                     <label for="pseudo" class="form-label">Pseudo :</label>
-                    <span class="errorMessage"><?= $errorMsg['pseudo'] ?></span>
+                    <span class="errorMessage"><?= $errorMsg['pseudo'] != 1 ? $errorMsg['pseudo'] : '' ?></span>
                     <input type="text" class="form-control" id="pseudo" placeholder="Pseudo" name="pseudo" value="<?= htmlspecialchars($_POST["pseudo"] ?? '') ?>">
                 </div>
                 <div class="col-auto">
                     <label for="email" class="form-label">Email :</label>
-                    <span class="errorMessage"><?= $errorMsg['email'] ?></span>
+                    <span class="errorMessage"><?= $errorMsg['email'] != 1 ? $errorMsg['email'] : '' ?></span>
                     <input type="text" class="form-control" id="email" placeholder="Email" name="email" value="<?= htmlspecialchars($_POST["email"] ?? '') ?>">
                 </div>
                 <div class="col-auto">
                     <label for="password" class="form-label">Password :</label>
-                    <span class="errorMessage"><?= $errorMsg['password'] ?></span>
+                    <span class="errorMessage"><?= $errorMsg['password'] != 1 ? $errorMsg['password'] : '' ?></span>
                     <input type="password" class="form-control" id="password" placeholder="Password" name="password">
                 </div>
                 <div class="col-auto">
                     <label for="confirmPassword" class="form-label">Password :</label>
-                    <span class="errorMessage"><?= $errorMsg['confirmPassword'] ?></span>
+                    <span class="errorMessage"><?= $errorMsg['confirmPassword'] != 1 ? $errorMsg['confirmPassword'] : '' ?></span>
                     <input type="password" class="form-control" id="confirmPassword" placeholder="Password" name="confirmPassword">
                 </div>
                 <div class="col-auto text-center">
